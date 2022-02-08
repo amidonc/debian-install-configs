@@ -1,0 +1,6 @@
+/etc/login.def
+    LOGIN_RETRIES=1
+    LOGIN_TIMEOUT=30
+
+/etc/systemd/system/getty.target.wants/getty@tty1.service
+  ExecStart=-sbin/agetty -o '-p -- \\u' --noissue --nohostname - $TERM
