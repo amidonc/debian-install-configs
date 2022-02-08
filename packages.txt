@@ -1,1 +1,7 @@
+man-db
+man-pages
+zsh
+grml-zsh-config
+curl
+git
 
