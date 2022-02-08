@@ -2,6 +2,7 @@ man-db
 man-pages
 zsh
 grml-zsh-config
+exa
 curl
 git
 
