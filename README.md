@@ -3,7 +3,6 @@
 TODO <br/>
 
 ~~secureboot using shim-signed & systemd-boot~~ &nbsp; done! <br />
- &emsp; try again using EUFI, SecureBoot, EFIStub, LUKS2, LVM - https://nwildner.com/posts/2020-07-04-secure-your-boot-process/ <br />
 decrypt luks with tpm </br>
 acpi <br/>
 cpu scaling <br/>
