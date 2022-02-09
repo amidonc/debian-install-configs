@@ -16,4 +16,4 @@ sway <br/>
    terminal <br/>
    program launcher <br/>
 
-maybe automate package install and customizations in the end.
+maybe automate package install and customizations in the end
