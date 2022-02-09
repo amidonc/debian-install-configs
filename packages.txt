@@ -7,8 +7,6 @@ vim
 curl
 git
 base-devel
-refind
-dosfstools
 shim
 mokutil
 sbsigntools
