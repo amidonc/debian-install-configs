@@ -8,10 +8,6 @@ curl
 git
 base-devel
 
-shim
-mokutil
-sbsigntools
-
 yay
   cd /opt
   sudo git clone https://aur.archlinux.org/yay.git  
@@ -19,3 +15,6 @@ yay
   cd yay
   makepkg -si
  
+shim-signed (yay)
+mokutil
+sbsigntools
