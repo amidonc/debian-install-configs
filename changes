@@ -4,3 +4,9 @@
 
 /etc/systemd/system/getty.target.wants/getty@tty1.service
   ExecStart=-sbin/agetty -o '-p -- \\u' --noissue --nohostname - $TERM
+
+/etc/default/useradd
+     SHELL=/bin/zsh
+
+chsh <username> -s /bin/zsh
+
