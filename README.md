@@ -1,7 +1,6 @@
 # archlinux-install-configs
 
 TODO
-
 secureboot
 acpi
 cpu scaling
