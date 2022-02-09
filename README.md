@@ -2,8 +2,8 @@
 
 TODO <br/>
 
-~~secureboot using shim-signed & systemd-boot~~ &nbsp; done! - 
-   - try agaib using EUFI, SecureBoot, EFIStub, LUKS2, LVM - https://nwildner.com/posts/2020-07-04-secure-your-boot-process/
+~~secureboot using shim-signed & systemd-boot~~ &nbsp; done! 
+   try agaib using EUFI, SecureBoot, EFIStub, LUKS2, LVM - https://nwildner.com/posts/2020-07-04-secure-your-boot-process/
 decrypt luks with tpm </br>
 acpi <br/>
 cpu scaling <br/>
