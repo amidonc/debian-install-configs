@@ -10,5 +10,7 @@ chsh <username> -s /bin/zsh
      timeout=0
      
 # configure shim with systemd-boot, enable secure boot
-      bootctl status **or** dmesg | grep -i secure
+     check secureboot status,  should be disabled.
+          bootctl status -or- dmesg | grep -i secure
+          install 
      
