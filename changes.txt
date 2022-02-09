@@ -12,5 +12,12 @@ chsh <username> -s /bin/zsh
 # configure shim with systemd-boot, enable secure boot
      check secureboot status,  should be disabled.
           bootctl status -or- dmesg | grep -i secure
-          install 
+     install required packages
+          shim-signed from yay
+          mokutil
+          sbsigntools
+     rename your current boot loader to grubx64.efi
+          
+      
+     
      
