@@ -6,10 +6,11 @@ secureboot
 acpi
 cpu scaling
 laptop tools
-suspend/hybernate
+suspend - linux hardened doesn't support hybernation
 
 login manager
 sway
+
 plymouth
 
 
