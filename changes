@@ -6,5 +6,8 @@
 chsh <username> -s /bin/zsh
 
 # remove systemd-bootloader timeout 
-/efi/boot/loader/loader.conf
+/boot/loader/loader.conf
      timeout=0
+     
+# configure shim with systemd-boot, enable secure boot
+     
