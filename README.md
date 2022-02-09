@@ -2,9 +2,8 @@
 
 TODO <br/>
 
-lock drive with hdparm <br/>
-decrypt luks with tpm </br>
 ~~secureboot using shim-signed & systemd-boot~~ &nbsp; done! <br/> 
+decrypt luks with tpm </br>
 acpi <br/>
 cpu scaling <br/>
 laptop tools <br/>
