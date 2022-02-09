@@ -1,6 +1,10 @@
-
+# make defualt shell for new users to zsh
 /etc/default/useradd
      SHELL=/bin/zsh
-
+     
+#change current users shell to zsh
 chsh <username> -s /bin/zsh
 
+# remove systemd-bootloader timeout 
+/efi/boot/loader/loader.conf
+     timeout=0
