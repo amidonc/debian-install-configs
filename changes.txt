@@ -17,6 +17,9 @@ chsh <username> -s /bin/zsh
           mokutil
           sbsigntools
      rename your current boot loader to grubx64.efi
+          mv esp/EFI/BOOT/BOOTx64.EFI esp/EFI/BOOT/grubx64.efi
+     
+     
           
       
      
