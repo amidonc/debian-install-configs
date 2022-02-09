@@ -2,6 +2,7 @@
 
 TODO <br/>
 
+encrypt drive with hdparm <br/>
 decrypt luks with tpm </br>
 secureboot <br/>
  
