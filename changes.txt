@@ -22,7 +22,7 @@ chsh <username> -s /bin/zsh
           cp /usr/share/shim-signed/shimx64.efi esp/EFI/BOOT/BOOTx64.EFI
           cp /usr/share/shim-signed/mmx64.efi esp/EFI/BOOT/
      create a new NVRAM entry to boot BOOTx64.EFI
-          efibootmgr --verbose --disk /dev/sdX --part Y --create --label "Shim" --loader /EFI/BOOT/BOOTx64.EFI
+          efibootmgr --verbose --disk /dev/sdX --part Y --create --label "" --loader /EFI/BOOT/BOOTx64.EFI
      sign your boot loader (named grubx64.efi) and kernel:
           sbsign --key MOK.key --cert MOK.crt --output /boot/vmlinuz-linux /boot/vmlinuz-linux
           sbsign --key MOK.key --cert MOK.crt --output esp/EFI/BOOT/grubx64.efi esp/EFI/BOOT/grubx64.efi
@@ -47,8 +47,8 @@ chsh <username> -s /bin/zsh
              
 copy MOK.cer to your can use EFI system partition
 reboot and enable secure boot
-if shim does not find the certificate grubx64.efi is signed with in moklist.  it will launch mokmanager (mmx64.efi).
-in mokmanager select enroll key from disk, find MOK.cer and add it to moklist
+if shim does not find the certificate grubx64.efi is signed with in moklist, it will launch mokmanager (mmx64.efi).
+in mokmanager select enroll key from disk, find MOK.cer and add it to moklist (pretty sure this didn't work but choosing grubx64.efi did)
 when done select continue boot and your boot loader will launch
 it will be capable launching any binary signed with your Machine Owner Key.     
           
