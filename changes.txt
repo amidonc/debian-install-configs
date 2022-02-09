@@ -17,8 +17,12 @@ chsh <username> -s /bin/zsh
           mokutil
           sbsigntools
      rename your current boot loader to grubx64.efi
-          mv esp/EFI/BOOT/BOOTx64.EFI esp/EFI/BOOT/grubx64.efi
-     
+          mv esp/EFI/BOOT/BOOTx64.EFI esp/EFI/BOOT/grubx64.efi    
+     copy shim and mokmanager to your boot loader directory on ESP; use previous filename of your boot loader as as the filename for shimx64.efi
+          cp /usr/share/shim-signed/shimx64.efi esp/EFI/BOOT/BOOTx64.EFI
+          cp /usr/share/shim-signed/mmx64.efi esp/EFI/BOOT/
+     create a new NVRAM entry to boot BOOTx64.EFI
+          efibootmgr --verbose --disk /dev/sdX --part Y --create --label "Shim" --loader /EFI/BOOT/BOOTx64.EFI
      
           
       
