@@ -8,7 +8,7 @@ decrypt luks with tpm <br />
 acpi <br />
 cpu scaling <br />
 laptop tools <br />
-AppArmor <br />
+~~apparmor~~ &nbsp; done! <br />
 firejail <br />
 
 suspend - linux hardened doesn't support hybernation <br />
