@@ -12,7 +12,7 @@ suspend - linux hardened doesn't support hybernation <br/>
 plymouth <br/>
 login manager <br/>
 sway <br/>
-   terminal <br/>
+   terminal (alacritty) <br/>
    program launcher <br/>
 
 maybe automate package install and customizations in the end
