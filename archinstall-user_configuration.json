@@ -5,9 +5,8 @@
     "harddrives": [
         "/dev/sda"
     ],
-    "hostname": "mercury",
+    "hostname": " <enter hostname> ",
     "kernels": [
-        "linux-zen",
         "linux-hardened"
     ],
     "keyboard-layout": "us",
