@@ -27,6 +27,7 @@ chsh <username> -s /bin/zsh
           sbsign --key MOK.key --cert MOK.crt --output /boot/vmlinuz-linux /boot/vmlinuz-linux
           sbsign --key MOK.key --cert MOK.crt --output esp/EFI/BOOT/grubx64.efi esp/EFI/BOOT/grubx64.efi
      automate the kernel signing with a pacman hook
+          
           /etc/pacman.d/hooks/999-sign_kernel_for_secureboot.hook
                [Trigger]
                Operation = Install
