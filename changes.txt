@@ -9,6 +9,13 @@ chsh <username> -s /bin/zsh
 /boot/loader/loader.conf
      timeout=0
      
+# enable apparmor
+     edit /boot/loader/entries/<entry>.conf
+     add to the end of option
+               lsm=landlock,lockdown,yama,apparmor,bpf
+     enable apparmor service
+               systemctrl enable apparmor.service
+
 # configure shim with systemd-boot, enable secure boot
      check secureboot status,  should be disabled.
           bootctl status -or- dmesg | grep -i secure
