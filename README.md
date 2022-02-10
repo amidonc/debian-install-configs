@@ -3,18 +3,22 @@
 TODO <br/>
 
 ~~secureboot using shim-signed & systemd-boot~~ &nbsp; done! <br />
-decrypt luks with tpm </br>
-acpi <br/>
-cpu scaling <br/>
-laptop tools <br/>
-suspend - linux hardened doesn't support hybernation <br/>
+secureboot creating custom keys and signing bootloader, maybe EFISTUB <br />
+decrypt luks with tpm <br />
+acpi <br />
+cpu scaling <br />
+laptop tools <br />
+AppArmor <br />
+firejail <br />
 
-plymouth <br/>
-login manager <br/>
-sway <br/>
-   terminal (alacritty) <br/>
-   program launcher <br/>
+suspend - linux hardened doesn't support hybernation <br />
 
-usbguard?
+plymouth <br />
+login manager <br />
+sway <br />
+   terminal (alacritty) <br />
+   program launcher <br />
+
+usbguard? <br >
 
 maybe automate package install and customizations in the end
