@@ -7,6 +7,13 @@ vim
 curl
 git
 base-devel
+apparmor
+
+
+# signed bootloader and key mgt tools 
+shim-signed (yay)
+mokutil
+sbsigntools
 
 yay
   cd /opt
@@ -14,7 +21,3 @@ yay
   sudo chown -R <username>:users ./yay
   cd yay
   makepkg -si
- 
-shim-signed (yay)
-mokutil
-sbsigntools
