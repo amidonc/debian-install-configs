@@ -15,4 +15,6 @@ sway <br/>
    terminal (alacritty) <br/>
    program launcher <br/>
 
+usbguard?
+
 maybe automate package install and customizations in the end
