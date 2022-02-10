@@ -44,13 +44,13 @@ chsh <username> -s /bin/zsh
                Depends = sbsigntools
                Depends = findutils
                Depends = grep
-             
-copy MOK.cer to your can use EFI system partition
-reboot and enable secure boot
-if shim does not find the certificate grubx64.efi is signed with in moklist, it will launch mokmanager (mmx64.efi).
-in mokmanager select enroll key from disk, find MOK.cer and add it to moklist (pretty sure this didn't work but choosing grubx64.efi did)
-when done select continue boot and your boot loader will launch
-it will be capable launching any binary signed with your Machine Owner Key.     
+     
+     copy MOK.cer to your can use EFI system partition
+     reboot and enable secure boot
+     if shim does not find the certificate grubx64.efi is signed with in moklist, it will launch mokmanager (mmx64.efi)
+     in mokmanager select enroll key from disk, find MOK.cer and add it to moklist (pretty sure this didn't work but choosing grubx64.efi did)
+     when done select continue boot and your boot loader will launch
+     it will be capable launching any binary signed with your Machine Owner Key.     
           
       
      
