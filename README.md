@@ -11,8 +11,8 @@ laptop tools <br />
    &emsp; acpi <br />
    &emsp; cpu scaling <br />
 ~~apparmor~~ &nbsp; done! <br />
-   &emsp; Lynis <br />
-   &emsp; apparmor rules set? <br />
+   &emsp; lynis <br />
+   &emsp; audit & apparmor rules set? <br />
 firejail <br />
 usbguard? <br >
 
