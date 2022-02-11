@@ -10,7 +10,7 @@ acpi <br />
 cpu scaling <br />
 laptop tools <br />
 ~~apparmor~~ &nbsp; done! <br />
-   apparmor rules? <br />
+&emsp; apparmor rules? <br />
 firejail <br />
 
 suspend - linux hardened doesn't support hybernation <br />
