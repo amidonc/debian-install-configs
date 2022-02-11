@@ -15,7 +15,8 @@ chsh <username> -s /bin/zsh
                lsm=landlock,lockdown,yama,apparmor,bpf
      enable apparmor service
                systemctrl enable apparmor.service
-
+               systemctrl enable audit
+               
 # configure shim with systemd-boot, enable secure boot
      check secureboot status,  should be disabled.
           bootctl status -or- dmesg | grep -i secure
