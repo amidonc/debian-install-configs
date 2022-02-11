@@ -8,7 +8,7 @@ curl
 git
 base-devel
 apparmor
-
+crda
 
 # signed bootloader and key mgt tools 
 shim-signed (yay)
