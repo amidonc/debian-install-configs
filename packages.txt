@@ -2,13 +2,13 @@ man-db
 man-pages
 zsh
 grml-zsh-config
+apparmor
+crda
 exa
 vim
 curl
 git
 base-devel
-apparmor
-crda
 
 # signed bootloader and key mgt tools 
 shim-signed (yay)
