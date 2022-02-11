@@ -15,7 +15,11 @@ chsh <username> -s /bin/zsh
                lsm=landlock,lockdown,yama,apparmor,bpf
      enable apparmor service
                systemctrl enable apparmor.service
-               systemctrl enable audit
+
+# enable audit framework, should be enabled on zen and hardened
+# of not enabled, add audit=1 as a kernel parameter
+# enable auditd service
+               systemctrl enable auditd.service
                
 # configure shim with systemd-boot, enable secure boot
      check secureboot status,  should be disabled.
