@@ -2,19 +2,11 @@ man-db
 man-pages
 zsh
 grml-zsh-config
-apparmor
 base-devel
-crda
 exa
 vim
 curl
 git
-
-
-# signed bootloader and key mgt tools 
-shim-signed (yay)
-mokutil
-sbsigntools
 
 yay
   cd /opt
