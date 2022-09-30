@@ -33,7 +33,7 @@ pacman -S acpid ntp dbus cups cronie
 
 systemctl enable acpid
 systemctl enable ntpd
-systemctl enable org.cups.cupsd.service
+systemctl enable cups.service
 
 # nano /etc/ntp.conf # not needed
 # For german time server de.pool.ntp.org
