@@ -14,3 +14,83 @@ yay
   sudo chown -R <username>:users ./yay
   cd yay
   makepkg -si
+
+
+
+
+
+
+
+# Install Gnome and some other useful thins
+# The official installation guide (https://wiki.archlinux.org/index.php/Installation_Guide) contains a more verbose description.
+# And based on https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger
+
+# I have just copied commands from https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger#Weitere_notwendige_Dienste
+# It's just to have it with one view after doing a [fresh installation](https://gist.github.com/thacoon/05d5a39606ab554455d6713e8a714b2c)
+
+# Some useful services
+pacman -S acpid ntp dbus cups cronie
+
+systemctl enable acpid
+systemctl enable ntpd
+systemctl enable org.cups.cupsd.service
+
+# nano /etc/ntp.conf # not needed
+# For german time server de.pool.ntp.org
+ntpd -gq
+date # verify correct time
+hwclock -w
+
+# GUI installation
+pacman -S xorg-server xorg-xinit
+
+# Find out your graphics drivers
+lspci | grep VGA
+pacman -Ss xf86-video | less #
+
+pacman -S YOUR_DRIVER
+pacman -S xorg-drivers # For all if you do not know
+
+# For labtops
+pacman -S xf86-input-synaptics
+
+# Minimal gnome installation
+pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gnome-control-center xdg-user-dirs gdm
+
+# The gnome terminal manager needs en_US.UTF-8 uncommented in locale.gen
+# For guake you have to change the keyboard and format used in the Gnome settings
+# If guake cannot display chars like: ä,ö,ü then regenerate the locales, like:
+nano /etc/locale.gen # uncomment the needed lines like: de_DE.UTF-8 or en_US.UTF-8
+locale-gen
+
+# set the system locale
+localectl set-locale LANG=en_US.UTF-8
+
+# you need to restart gnome so gnome knows about the change or just reboot
+
+
+# If you do not want a graphical user login
+cp /etc/skel/.xinitrc /home/MYUSERNAME
+# If there is no such file use:
+cp /etc/X11/xinit/xinitrc /home/MYUSERNAME
+mv ~/xinitrc ~/.xinitrc
+nano ~/.xinitrc # As a normal user
+# Add exec gnome-session but only one exec should be used
+startx # Start Gnome session
+
+# If you want to use a graphical user login
+systemctl start gdm
+systemctl enable gdm # If everything works fine, to use gdm automatically
+
+# Install NetworkManager
+# Gnome-keyring is needed to store the wifi passwords encrypted
+sudo pacman -Sy networkmanager gnome-keyring
+sudo systemctl start NetworkManager
+sudo systemctl enable NetworkManager
+
+# Install Firefox
+sudo pacman -Sy firefox
+
+# Screen sharing in the browsers may not work if you use Wayland. To fix this install:
+sudo pacman -Sy xdg-desktop-portal xdg-desktop-portal-gnome 
+# Firefox supports this by default, for Chromium you need to enable the flag chrome://flags/#enable-webrtc-pipewire-capturer
