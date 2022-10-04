@@ -16,6 +16,22 @@ yay
   makepkg -si
 
 
+# Some useful services
+pacman -S acpid ntp dbus cups cronie
+
+systemctl enable acpid
+systemctl enable ntpd
+systemctl enable cups.service
+
+ntpd -gq
+date # verify correct time
+hwclock -w
+
+
+
+
+
+
 
 
 
