@@ -8,6 +8,7 @@ vim
 curl
 git
 
+go # needed for yay
 yay
   cd /opt
   sudo git clone https://aur.archlinux.org/yay.git  
