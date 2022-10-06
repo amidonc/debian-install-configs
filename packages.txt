@@ -29,51 +29,6 @@ date # verify correct time
 hwclock -w
 
 
-
-
-
-
-
-
-
-
-
-# Install Gnome and some other useful thins
-# The official installation guide (https://wiki.archlinux.org/index.php/Installation_Guide) contains a more verbose description.
-# And based on https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger
-
-# I have just copied commands from https://wiki.archlinux.de/title/Anleitung_f%C3%BCr_Einsteiger#Weitere_notwendige_Dienste
-# It's just to have it with one view after doing a [fresh installation](https://gist.github.com/thacoon/05d5a39606ab554455d6713e8a714b2c)
-
-# Some useful services
-pacman -S acpid ntp dbus cups cronie
-
-systemctl enable acpid
-systemctl enable ntpd
-systemctl enable cups.service
-
-# nano /etc/ntp.conf # not needed
-# For german time server de.pool.ntp.org
-ntpd -gq
-date # verify correct time
-hwclock -w
-
-# GUI installation
-pacman -S xorg-server xorg-xinit
-
-# Find out your graphics drivers
-lspci | grep VGA
-pacman -Ss xf86-video | less #
-
-pacman -S YOUR_DRIVER
-pacman -S xorg-drivers # For all if you do not know
-
-# For labtops
-pacman -S xf86-input-synaptics
-
-# Minimal gnome installation
-pacman -S gnome-shell nautilus gnome-terminal guake gnome-tweak-tool gnome-control-center xdg-user-dirs gdm
-
 # The gnome terminal manager needs en_US.UTF-8 uncommented in locale.gen
 # For guake you have to change the keyboard and format used in the Gnome settings
 # If guake cannot display chars like: ä,ö,ü then regenerate the locales, like:
