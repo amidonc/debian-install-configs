@@ -9,6 +9,17 @@ chsh <username> -s /bin/zsh
 /boot/loader/loader.conf
      timeout=0
 
+
+# Hyper-V
+
+     # linux guest enable service:
+     hv_fcopy_daemon.service, hv_kvp_daemon.service and hv_vss_daemon.service
+          sudo systemctl start <service>
+          sudo systemctl enable <service>
+
+     # windows hyper-v host 
+     enable-VMIntegrationService -VMName "linuxbox" -Name "Guest Service Interface"
+     PS C:\Users\camidon> Get-VMIntegrationService -VMName "linuxbox"
       
      
      
