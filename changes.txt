@@ -9,6 +9,9 @@ chsh <username> -s /bin/zsh
 /boot/loader/loader.conf
      timeout=0
 
+# ssh
+sudo systemctl enable --now sshd
+sudo systemctl status sshd
 
 # Hyper-V
 
