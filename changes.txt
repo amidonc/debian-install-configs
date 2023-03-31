@@ -21,5 +21,7 @@ chsh <username> -s /bin/zsh
      enable-VMIntegrationService -VMName "linuxbox" -Name "Guest Service Interface"
      PS C:\Users\camidon> Get-VMIntegrationService -VMName "linuxbox"
       
-     
-     
+
+# SMB Shares
+  mount -t cifs [Network Path with forward slashes] mountpoint -o user=[user you wish to authenticate as],ip=[host IP/UNC]
+
