@@ -3,10 +3,16 @@ man-pages
 zsh
 grml-zsh-config
 base-devel
+openssh
+cifs-utils
 exa
 vim
 curl
 git
+
+# Hyper-V
+hyperv
+
 
 go # needed for yay
 yay
