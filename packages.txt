@@ -1,11 +1,7 @@
 zsh
-base-devel
+zsh-autosuggestions
+zsh-syntax-highlighting
+vim
 cifs-utils
-exa
 curl
 git
-
-# Hyper-V
-hyperv
-
-
