@@ -1,1 +1,1 @@
-# archlinux-install-configs
+# Debian Install Configs
