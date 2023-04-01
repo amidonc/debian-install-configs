@@ -5,17 +5,10 @@
 #change current users shell to zsh
 chsh <username> -s /bin/zsh
 
-# remove systemd-bootloader timeout 
-/boot/loader/loader.conf
-     timeout=0
-
-# ssh
-sudo systemctl enable --now sshd
-sudo systemctl status sshd
-
-cd ~/.ssh
-ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
-
+# remove grub timeout
+/etc/default/grub
+GRUB_TIMEOUT=0
+sudo update-grub
 
 # Hyper-V
 
