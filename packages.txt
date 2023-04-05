@@ -5,3 +5,6 @@ vim
 cifs-utils
 curl
 git
+
+usbutils
+usbip
