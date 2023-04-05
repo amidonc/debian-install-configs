@@ -9,3 +9,17 @@ sudo update-grub
 # SMB Shares
   mount -t cifs [Network Path with forward slashes] mountpoint -o user=[user you wish to authenticate as],ip=[host IP/UNC]
 
+# usbip - Windows (as Admin)
+usbipd list
+usbipd bind <BUS-ID>
+
+# usbip - Linux
+modprobe vhci-hcd
+usbip list
+usbip attach -r <ip> -b <bus-id>
+
+# Adruino check
+ls -l /dev/ttyACM*
+
+# Powershell 
+$env:DISPLAY="localhost:0.0"
