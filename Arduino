@@ -1,0 +1,14 @@
+
+Change fuses/firmware depending on which side you are flashing (M2560/M16U2)
+
+Firmwares: Arduino-COMBINED-dfu-usbserial-atmega16u2-Mega2560-Rev3.hex / stk500boot_v2_mega2560.hex
+
+1st command:
+
+avrdude -C avrdude.conf -P usb -p m16U2 -b 57600 -c usbtiny -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xF4:m -U lock:w:0x0F:m
+2nd command:
+
+avrdude -c usbtiny -p m16U2 -P usb -b 115200 -V -U flash:w:Arduino-COMBINED-dfu-usbserial-atmega16u2-Mega2560-Rev3.hex
+3rd command:
+
+avrdude -c usbtiny -p m16U2 -P usb -b 115200 -U lock:w:0x0F:m
